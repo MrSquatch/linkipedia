@@ -79,7 +79,7 @@ const SearchBar = () => {
       >
         <Combobox.Target>
           <TextInput
-            placeholder="Search an article"
+            placeholder="Search an article (jean)"
             value={value}
             onChange={(event) => {
               setValue(event.currentTarget.value)
