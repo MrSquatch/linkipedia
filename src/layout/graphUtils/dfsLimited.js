@@ -8,7 +8,11 @@ export const dfsLimited = (
   visited
 ) => {
   visited.set(currentNode, true);
-  strRes += adjList[currentNode].name + ' ';
+
+  strAdd = adjList[currentNode].name;
+  if (depth === 1) strAdd.toUpperCase();
+
+  strRes += strAdd + ' ';
 
   if (depth === 2) {
     console.log('\t-', strRes);
