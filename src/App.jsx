@@ -8,12 +8,12 @@ import TestButton from './components/TestButton/TestButton'
 const App = () => {
   return (
     <>
-      <SearchBar />
-      <TestButton />
+      <SearchBar />      
       <ResetButton />
       <Graph />
       <Notif />
       <ColorTheme/>
+      <TestButton />
     </>
   )
 }
