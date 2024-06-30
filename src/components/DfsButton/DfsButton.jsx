@@ -2,7 +2,7 @@ import { Affix, Button } from '@mantine/core';
 import useData from '../../store/useData';
 import { createAdjacencyList } from '../../layout/graphUtils/adjacencyList';
 
-const AdjacencyListButton = () => {
+const DfsButton = () => {
   const { graphData } = useData();
   const adjacencyList = createAdjacencyList(graphData);
 
@@ -32,7 +32,7 @@ const AdjacencyListButton = () => {
     });
   };
 
-  const handleAdjacencyListClick = () => {
+  const handleDfsClick = () => {
     console.log(adjacencyList);
 
     if (Object.values(adjacencyList).length != 0) {
@@ -49,11 +49,11 @@ const AdjacencyListButton = () => {
     <Affix top={20} right={100}>
       {' '}
       {}
-      <Button color="blue" onClick={handleAdjacencyListClick}>
-        AdjList + DFS
+      <Button color="blue" onClick={handleDfsClick}>
+        Semantic Relations
       </Button>
     </Affix>
   );
 };
 
-export default AdjacencyListButton;
+export default DfsButton;
