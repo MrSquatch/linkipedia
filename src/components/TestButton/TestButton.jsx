@@ -35,13 +35,18 @@ const AdjacencyListButton = () => {
   const handleAdjacencyListClick = () => {
     console.log(adjacencyList);
 
-    const visited = new Map();
-    const selectedNode = 0;
-    dfsLimited(adjacencyList, selectedNode, selectedNode, '', 0, visited);
+    if (Object.values(adjacencyList).length != 0) {
+      const visited = new Map();
+      const selectedNode = 0;
+
+      dfsLimited(adjacencyList, selectedNode, selectedNode, '', 0, visited);
+    } else {
+      console.log('Adjacency List is empty!');
+    }
   };
 
   return (
-    <Affix top={20} right={200}>
+    <Affix top={20} right={100}>
       {' '}
       {}
       <Button color="blue" onClick={handleAdjacencyListClick}>
