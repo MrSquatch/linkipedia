@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar';
 import Notif from './components/Notif';
 import ResetButton from './components/ResetButton';
 import ColorTheme from './components/ColorTheme/ColorTheme';
-import TestButton from './components/DfsButton/DfsButton';
+import SemanticButton from './components/Semantic/SemanticButton';
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
       <Graph />
       <Notif />
       <ColorTheme />
-      <TestButton />
+      <SemanticButton />
     </>
   );
 };
