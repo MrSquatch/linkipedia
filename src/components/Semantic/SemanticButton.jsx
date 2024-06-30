@@ -19,7 +19,7 @@ const SemanticButton = () => {
         const visited = new Map();
         const startNode = selectedNode.index;
 
-        console.log('Semantic Relations of Node ' + startNode + ':');
+        console.log('Semantic Relations of Node "' + selectedNode.name + '":');
         dfsLimited(adjacencyList, startNode, startNode, '', 0, visited);
       }
     } else {
