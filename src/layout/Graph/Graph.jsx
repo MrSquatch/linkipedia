@@ -3,7 +3,13 @@ import useData from '../../store/useData';
 import { useViewportSize } from '@mantine/hooks';
 
 const Graph = () => {
-  const { graphData, expandItem, fetchState, expandedItems } = useData();
+  const {
+    graphData,
+    expandItem,
+    fetchState,
+    expandedItems,
+    setSelectedNode,
+  } = useData();
   const { width } = useViewportSize();
 
   // Imprime graphData en la consola cada vez que el componente se renderiza
