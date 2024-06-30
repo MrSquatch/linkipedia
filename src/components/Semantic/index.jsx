@@ -1,3 +1,3 @@
-import SemButton from './SemanticButton.jsx';
+import SemanticButton from './SemanticButton.jsx';
 
-export default SemButton;
+export default SemanticButton;

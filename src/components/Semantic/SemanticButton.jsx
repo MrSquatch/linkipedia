@@ -32,4 +32,4 @@ const SemanticButton = () => {
   );
 };
 
-export default DfsButton;
+export default SemanticButton;
