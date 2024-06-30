@@ -20,7 +20,7 @@ const SemanticButton = () => {
         const startNode = selectedNode.index;
 
         console.log(
-          '- Semantic Relations of Node "' + selectedNode.name + '":'
+          '+ Semantic Relations of Node "' + selectedNode.name + '":'
         );
         dfsLimited(adjacencyList, startNode, startNode, '', 0, visited);
       }
