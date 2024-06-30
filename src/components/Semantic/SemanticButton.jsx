@@ -4,7 +4,7 @@ import { createAdjacencyList } from '../../layout/graphUtils/adjacencyList';
 import { dfsLimited } from '../../layout/graphUtils/dfsLimited';
 
 const SemanticButton = () => {
-  const { graphData, selectedNode } = useData();
+  const { graphData, expandedItems, selectedNode } = useData();
   const adjacencyList = createAdjacencyList(graphData);
 
   const handleSemanticClick = () => {
@@ -14,6 +14,7 @@ const SemanticButton = () => {
       const visited = new Map();
       const selected = 0;
 
+      console.log(expandedItems);
       console.log(selectedNode);
 
       console.log('Semantic Relations of Node ' + selected + ':');
