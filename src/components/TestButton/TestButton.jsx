@@ -7,7 +7,7 @@ const AdjacencyListButton = () => {
   const adjacencyList = createAdjacencyList(graphData);
 
   // Función DFS limitada con Map para control de visitados
-  const dfsLimited = (adjList, currentNode, strRes, depth, visited) => {
+  const dfsLimited = (adjList, root, currentNode, strRes, depth, visited) => {
     visited.set(currentNode, true);
     strRes += adjList[currentNode].name + ' ';
 
@@ -18,8 +18,16 @@ const AdjacencyListButton = () => {
 
     // Recorrer los hijos del nodo actual
     adjList[currentNode].children.forEach((child) => {
-      if (!visited.has(child.index)) {
-        dfsLimited(adjList, child.index, strRes, depth + 1, visited);
+      if (depth === 0) {
+        if (!visited.has(child.index)) {
+          dfsLimited(adjList, root, child.index, strRes, depth + 1, visited);
+        }
+      }
+
+      if (depth === 1) {
+        if (child.index != root) {
+          dfsLimited(adjList, root, child.index, strRes, depth + 1, visited);
+        }
       }
     });
   };
@@ -28,7 +36,8 @@ const AdjacencyListButton = () => {
     console.log(adjacencyList);
 
     const visited = new Map();
-    dfsLimited(adjacencyList, 0, '', 0, visited);
+    const selectedNode = 0;
+    dfsLimited(adjacencyList, selectedNode, selectedNode, '', 0, visited);
   };
 
   return (
