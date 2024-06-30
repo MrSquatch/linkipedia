@@ -17,10 +17,13 @@ export const createAdjacencyList = (graphData) => {
 
     // Añadir la conexión de target a source (si es no dirigido)
     // Si es un grafo dirigido, omitir esta parte
-    // if (!adjacencyList[target.index]) {
-    //   adjacencyList[target.index] = [];
-    // }
-    // adjacencyList[target.index].push({ index: source.index, name: source.name });
+    if (!adjacencyList[target.index]) {
+      adjacencyList[target.index] = [];
+    }
+    adjacencyList[target.index].push({
+      index: source.index,
+      name: source.name,
+    });
   });
 
   return adjacencyList;
