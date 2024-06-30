@@ -8,19 +8,24 @@ export const createAdjacencyList = (graphData) => {
 
     // Añadir la conexión de source a target
     if (!adjacencyList[source.index]) {
-      adjacencyList[source.index] = [];
+      adjacencyList[source.index] = {
+        name: source.name,
+        children: [],
+      };
     }
-    adjacencyList[source.index].push({
+    adjacencyList[source.index].children.push({
       index: target.index,
       name: target.name,
     });
 
-    // Añadir la conexión de target a source (si es no dirigido)
-    // Si es un grafo dirigido, omitir esta parte
+    // Añadir la conexión de target a source
     if (!adjacencyList[target.index]) {
-      adjacencyList[target.index] = [];
+      adjacencyList[target.index] = {
+        name: target.name,
+        children: [],
+      };
     }
-    adjacencyList[target.index].push({
+    adjacencyList[target.index].children.push({
       index: source.index,
       name: source.name,
     });

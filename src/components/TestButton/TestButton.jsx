@@ -13,7 +13,7 @@ const AdjacencyListButton = () => {
   };
 
   return (
-    <Affix top={20} right={300}> {}
+    <Affix top={20} right={200}> {}
       <Button color="blue" onClick={handleAdjacencyListClick}>
         Adjacent List
       </Button>
