@@ -11,7 +11,7 @@ export const dfsLimited = (
   strRes += adjList[currentNode].name + ' ';
 
   if (depth === 2) {
-    console.log(strRes);
+    console.log('\t', strRes);
     return;
   }
 

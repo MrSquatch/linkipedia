@@ -10,7 +10,7 @@ const SemanticButton = () => {
   const handleSemanticClick = () => {
     console.log('Adjacency List:', adjacencyList);
     // console.log(expandedItems);
-    console.log('selected Node:', selectedNode);
+    console.log('Selected Node:', selectedNode);
 
     if (Object.values(adjacencyList).length != 0) {
       if (!expandedItems.includes(selectedNode)) {
@@ -19,7 +19,9 @@ const SemanticButton = () => {
         const visited = new Map();
         const startNode = selectedNode.index;
 
-        console.log('Semantic Relations of Node "' + selectedNode.name + '":');
+        console.log(
+          '- Semantic Relations of Node "' + selectedNode.name + '":'
+        );
         dfsLimited(adjacencyList, startNode, startNode, '', 0, visited);
       }
     } else {
