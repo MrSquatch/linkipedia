@@ -6,6 +6,9 @@ const Graph = () => {
   const { graphData, expandItem, fetchState, expandedItems } = useData()
   const { width } = useViewportSize()
 
+  // Imprime graphData en la consola cada vez que el componente se renderiza
+  console.log(graphData);
+
   const handleNodeClick = (node) => {
     if (fetchState === 'loading') {
       return
