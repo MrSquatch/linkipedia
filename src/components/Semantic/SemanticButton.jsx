@@ -8,9 +8,9 @@ const SemanticButton = () => {
   const adjacencyList = createAdjacencyList(graphData);
 
   const handleSemanticClick = () => {
-    console.log(adjacencyList);
-    console.log(expandedItems);
-    console.log(selectedNode);
+    console.log('Adjacency List:', adjacencyList);
+    // console.log(expandedItems);
+    console.log('selected Node:', selectedNode);
 
     if (Object.values(adjacencyList).length != 0) {
       if (!expandedItems.includes(selectedNode)) {
