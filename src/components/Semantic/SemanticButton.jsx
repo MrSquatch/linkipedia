@@ -9,16 +9,19 @@ const SemanticButton = () => {
 
   const handleSemanticClick = () => {
     console.log(adjacencyList);
+    console.log(expandedItems);
+    console.log(selectedNode);
 
     if (Object.values(adjacencyList).length != 0) {
-      const visited = new Map();
-      const selected = 0;
+      if (!expandedItems.includes(selectedNode)) {
+        console.log('The selected node is not a root!');
+      } else {
+        const visited = new Map();
+        const startNode = selectedNode.index;
 
-      console.log(expandedItems);
-      console.log(selectedNode);
-
-      console.log('Semantic Relations of Node ' + selected + ':');
-      dfsLimited(adjacencyList, selected, selected, '', 0, visited);
+        console.log('Semantic Relations of Node ' + startNode + ':');
+        dfsLimited(adjacencyList, startNode, startNode, '', 0, visited);
+      }
     } else {
       console.log('Adjacency List is empty!');
     }
