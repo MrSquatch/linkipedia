@@ -8,6 +8,8 @@ const SemanticButton = () => {
   const adjacencyList = createAdjacencyList(graphData);
 
   const handleSemanticClick = () => {
+    console.log('\nSemantic Relations button was clicked!');
+
     console.log('Adjacency List:', adjacencyList);
     // console.log(expandedItems);
     console.log('Selected Node:', selectedNode);
